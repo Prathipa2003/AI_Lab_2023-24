@@ -44,7 +44,8 @@ hypothesis(Patient,measles) :-
 	symptom(Patient,runny_nose).
 symptom(raju,headache).
 symptom(raju,sneezing).
-symptom(raju,sore_throat).```
+symptom(raju,sore_throat).
+```
 
 ### Output:
 
