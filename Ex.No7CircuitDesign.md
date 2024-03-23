@@ -29,8 +29,8 @@ halfadder(A,B,Sum,Carry):-
 ```
 
 ### Output:
-![image](https://github.com/Prathipa2003/AI_Lab_2023-24/assets/162797752/53acbed4-1643-46ff-b58f-c6fca2169a3e)
 
+![image](https://github.com/Prathipa2003/AI_Lab_2023-24/assets/162797752/86eb1c9f-5d35-4589-ade5-ec9c17ecd7b5)
 
 ### Result:
 Thus the truth table of circuit verified sucessfully.
