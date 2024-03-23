@@ -41,7 +41,7 @@ problem(blank_display).
 ```
 ### Output:
 
-
+![image](https://github.com/Prathipa2003/AI_Lab_2023-24/assets/162797752/c17138c1-7a31-4de3-b858-23a7cc97f3d7)
 
 ### Result:
 Thus the simple omputer maintenance expert system was built sucessfully.
