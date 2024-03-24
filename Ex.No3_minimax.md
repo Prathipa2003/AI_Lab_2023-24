@@ -26,7 +26,7 @@ def minimax(depth, nodeIndex, maximizingPlayer,
     # leaf node is reached
     if depth == 3:
         return values[nodeIndex]
- /   if maximizingPlayer: 
+    if maximizingPlayer: 
         best = MIN
         # Recur for left and right children
         for i in range(0, 2):      
