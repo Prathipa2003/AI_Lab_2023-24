@@ -16,47 +16,28 @@ Write a mini-max search algorithm to find the optimal value of MAX Player from t
 
 ### Program:
 ```
-# Initial values of Alpha and Beta
-MAX, MIN = 1000, -1000
-# Returns optimal value for current player
-#(Initially called for root and maximizer)
-def minimax(depth, nodeIndex, maximizingPlayer,
-            values, alpha, beta):
-    # Terminating condition. i.e
-    # leaf node is reached
-    if depth == 3:
-        return values[nodeIndex]
-    if maximizingPlayer: 
-        best = MIN
-        # Recur for left and right children
-        for i in range(0, 2):      
-            val = minimax(depth + 1, nodeIndex * 2 + i,
-                          False, values, alpha, beta)
-            best = max(best, val)
-            alpha = max(alpha, best)
-            # Alpha Beta Pruning
-            if beta <= alpha:
-                break      
-        return best     
+import math
+def minimax (curDepth, nodeIndex, maxTurn, scores,targetDepth):
+    # base case : targetDepth reached
+    if (curDepth == targetDepth):
+        return scores[nodeIndex]
+    if (maxTurn):
+        return max(minimax(curDepth + 1, nodeIndex * 2,False, scores, targetDepth),
+                   minimax(curDepth + 1, nodeIndex * 2 + 1,
+                    False, scores, targetDepth))
+     
     else:
-        best = MAX
-        # Recur for left and
-        # right children
-        for i in range(0, 2):
-          
-            val = minimax(depth + 1, nodeIndex * 2 + i,
-                            True, values, alpha, beta)
-            best = min(best, val)
-            beta = min(beta, best)
- 
-            # Alpha Beta Pruning
-            if beta <= alpha:
-                break          
-        return best      
-values = [3, 5, 6, 9, 1, 2, 0, -1] 
-print("The optimal value is :", minimax(0, 0, True, values, MIN, MAX))
+        return min(minimax(curDepth + 1, nodeIndex * 2, True, scores, targetDepth),
+                   minimax(curDepth + 1, nodeIndex * 2 + 1,
+                     True, scores, targetDepth))
+     
+# Driver code
+scores = [3, 5, 2, 9, 12, 5, 23, 20]
+treeDepth = math.log(len(scores), 2) # calculate depth of node  log 8 (base 2) = 3)
+print("The optimal value is : ", end = "")
+print(minimax(0, 0, True, scores, treeDepth))
 ```
 ### Output:
-![image](https://github.com/Prathipa2003/AI_Lab_2023-24/assets/162797752/7a1bb630-0e9e-46d1-810f-1f70611130a5)
+![image](https://github.com/Prathipa2003/AI_Lab_2023-24/assets/162797752/c92c14ce-5611-4775-980e-afd6153b589d)
 ### Result:
 Thus the optimum value of max player was found using minimax search.
