@@ -1,6 +1,6 @@
-# Ex.No: 6   Logic Programming – Factorial of number   
-### DATE:                                                                            
-### REGISTER NUMBER : 
+//# Ex.No: 6   Logic Programming – Factorial of number   
+### DATE: 19/03/2024                                                                       
+### REGISTER NUMBER: 212221060209 
 ### AIM: 
 To  write  a logic program  to solve Towers of Hanoi problem  using SWI-PROLOG. 
 ### Algorithm:
@@ -12,14 +12,22 @@ To  write  a logic program  to solve Towers of Hanoi problem  using SWI-PROLOG.
 6.        ii)	Move  Nth disk from X to Y
 7.        iii)	Move  N-1 disks from Y to X.
 8. Run the program  to find answer of  query.
-
 ### Program:
-
-
-
+```
+move(1,X,Y,_) :-  
+    write('Move top disk from '), 
+    write(X), 
+    write(' to '), 
+    write(Y), 
+    nl. 
+move(N,X,Y,Z) :- 
+    N>1, 
+    M is N-1, 
+    move(M,X,Z,Y), 
+    move(1,X,Y,_), 
+    move(M,Z,Y,X).
+```
 ### Output:
-
-
-
+![image](https://github.com/Prathipa2003/AI_Lab_2023-24/assets/162797752/77451f6a-075d-4987-8d87-a498becfc2c8)
 ### Result:
 Thus the solution of Towers of Hanoi problem was found by logic programming.
