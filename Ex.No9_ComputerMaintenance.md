@@ -11,8 +11,7 @@ Write a Prolog program to build a computer maintenance expert system.
 5. If system have not printing, paper jam and out of paper then system fault on paper stuck in printer
 6. Similarly define rules for all faults.
 7. Define facts for system problems.
-8. Find the fault of computer by passing query to system.
-     
+8. Find the fault of computer by passing query to system.     
 ### Program:
 ```
 fault(printer_head) :-
@@ -40,8 +39,6 @@ problem(two_short_beeps).
 problem(blank_display).
 ```
 ### Output:
-
-![image](https://github.com/Prathipa2003/AI_Lab_2023-24/assets/162797752/c17138c1-7a31-4de3-b858-23a7cc97f3d7)
-
+![image](https://github.com/Prathipa2003/AI_Lab_2023-24/assets/162797752/02c31d19-a74e-4721-8cd9-14b440cf3f02)
 ### Result:
 Thus the simple omputer maintenance expert system was built sucessfully.
