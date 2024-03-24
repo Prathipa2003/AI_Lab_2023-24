@@ -1,6 +1,6 @@
 # Ex.No: 3  Implementation of Minimax Search
-### DATE:                                                                            
-### REGISTER NUMBER : 
+### DATE: 19/03/2024                                                                           
+### REGISTER NUMBER: 212221060209 
 ### AIM: 
 Write a mini-max search algorithm to find the optimal value of MAX Player from the given graph.
 ### Algorithm:
@@ -15,20 +15,48 @@ Write a mini-max search algorithm to find the optimal value of MAX Player from t
 9. Stop the program. 
 
 ### Program:
-
-
-
-
-
-
-
-
-
-
-
+```
+# Initial values of Alpha and Beta
+MAX, MIN = 1000, -1000
+# Returns optimal value for current player
+#(Initially called for root and maximizer)
+def minimax(depth, nodeIndex, maximizingPlayer,
+            values, alpha, beta):
+    # Terminating condition. i.e
+    # leaf node is reached
+    if depth == 3:
+        return values[nodeIndex]
+ /   if maximizingPlayer: 
+        best = MIN
+        # Recur for left and right children
+        for i in range(0, 2):      
+            val = minimax(depth + 1, nodeIndex * 2 + i,
+                          False, values, alpha, beta)
+            best = max(best, val)
+            alpha = max(alpha, best)
+            # Alpha Beta Pruning
+            if beta <= alpha:
+                break      
+        return best     
+    else:
+        best = MAX
+        # Recur for left and
+        # right children
+        for i in range(0, 2):
+          
+            val = minimax(depth + 1, nodeIndex * 2 + i,
+                            True, values, alpha, beta)
+            best = min(best, val)
+            beta = min(beta, best)
+ 
+            # Alpha Beta Pruning
+            if beta <= alpha:
+                break          
+        return best      
+values = [3, 5, 6, 9, 1, 2, 0, -1] 
+print("The optimal value is :", minimax(0, 0, True, values, MIN, MAX))
+```
 ### Output:
-
-
-
+![image](https://github.com/Prathipa2003/AI_Lab_2023-24/assets/162797752/7a1bb630-0e9e-46d1-810f-1f70611130a5)
 ### Result:
 Thus the optimum value of max player was found using minimax search.
