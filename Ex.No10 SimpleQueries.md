@@ -56,7 +56,7 @@ Consider the statement <br>
 Convert to Clause form and prove west is criminal by using Prolog.<br> 
 ### Program:
 ```
-american(colonel_west).
+american(west).
 enemy(nano, america).
 owns(nano, missile).
 criminal(X) :-
@@ -65,12 +65,12 @@ criminal(X) :-
     hostile(Z),
     sells(X, Y, Z).
 hostile(nano).
-sells(colonel_west, Y, nano) :-
+sells(west, Y, nano) :-
     weapon(Y),
     owns(nano, Y).
 weapon(missile).
 ```
 ### Output:
-![image](https://github.com/Prathipa2003/AI_Lab_2023-24/assets/162797752/40e7e5c2-e7f5-4f96-b8f9-aa5a9f25f1b7)
+![image](https://github.com/Prathipa2003/AI_Lab_2023-24/assets/162797752/31ac8048-38ff-4cb1-bdda-3c6d0ea6250f)
 ### Result:
 Thus the prolog programs were executed successfully and the answer of query was found.
