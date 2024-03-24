@@ -10,9 +10,7 @@ Write a Prolog program to build a medical Diagnosis Expert System.
 4. If patient have cough, sneeze and running nose then disease is measles.
 5. if patient have symptoms headache ,sneezing ,sore_throat, runny_nose and  chills then disease is common cold.
 6. Define rules for all disease.
-7. Call the predicates and Collect the symptoms of Patient and give the hypothesis of disease.
-        
-
+7. Call the predicates and Collect the symptoms of Patient and give the hypothesis of disease.   
 ### Program:
 ```
 hypothesis(Patient,german_measles) :-
@@ -46,10 +44,7 @@ symptom(raju,headache).
 symptom(raju,sneezing).
 symptom(raju,sore_throat).
 ```
-
 ### Output:
-
-![image](https://github.com/Prathipa2003/AI_Lab_2023-24/assets/162797752/d8dc6d21-2ea6-4365-a569-313674a6ba39)
-
+![image](https://github.com/Prathipa2003/AI_Lab_2023-24/assets/162797752/8e89db52-1563-428f-acc5-c6901d1a7921)
 ### Result:
 Thus the simple medical diagnosis system was built sucessfully.
